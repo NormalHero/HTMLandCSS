@@ -1,0 +1,71 @@
+CSS 배경
+
+background-color
+HTML 요소의 배경색을 설정합니다.
+
+
+background-image
+HTML 요소의 배경으로 나타날 배경 이미지를 설정합니다. 설정된 배경 이미지는 기본 설정으로 HTML 요소 전체에 걸쳐 반복되어 나타납니다.
+
+background-image: url('배경이미지 위치');
+
+
+background-repeat
+배경 이미지를 수평이나 수직 방향으로 반복하도록 설정합니다. (repeat, repeat-x, repeat-y, no-repeat)
+
+
+background-position
+반복되지 않는 배경 이미지의 상대 위치를 설정합니다. %나 px을 사용하여 상대위치를 직접 설정할 수 있습니다. 상대 위치를 결정하는 기준은 해당 요소의 왼쪽 상단입니다.
+
+left top(기본값)        center top      right top
+left center             center          right center
+left bottom             center bottom   right bottom
+
+위치값으로도 사용할 수 있습니다.
+background-position: 가로 위치 값 세로 위치 값
+background-position: 10% 100px;
+
+
+background-attachment
+위치가 설정된 배경 이미지를 원하는 위치에 고정시킬 수 있습니다. 고정된 배경 이미지는 스크롤과 무관하게 화면의 위치에서 이동하지 않습니다.
+
+
+background-attachment: fixed
+
+
+background
+배경 속성을 한 번에 적용합니다.
+
+
+
+박스 모델(BOX MODEL)
+모든 HTML 요소는 박스모양으로 구성됩니다. 이것을 박스 모델이라고 부릅니다. 박스 모델은 HTML 요소를 패딩, 테두리, 마진, 내용으로 구분합니다.
+
+내용(content)
+텍스트나 이미지가 들어있는 박스의 실질적인 내용 부분입니다.
+
+패딩(padding)
+내용과 테두리 사이의 간격입니다.
+padding-top : 위
+padding-right : 오른쪽
+padding-bottom : 아래쪽
+padding-left : 왼쪽
+
+padding
+모든 패딩 속성을 한꺼번에 설정합니다. 방향은 위부터 시작해서 시계방향으로 설정합니다.
+
+<div id="padding">안녕하세요</div>
+
+div#padding { padding: 20px 50px 30px 10px; }
+위 20px, 오른쪽 50px, 아래 30px, 왼쪽 10px로 패딩 설정
+
+div#padding { padding: 20px 50px 30px; }
+위 20px, 오른쪽 왼쪽 50px, 아래 30px으로 패딩 설정
+
+div#padding { padding: 20px 50px; }
+위 아래 20px, 오른쪽 왼쪽 50px로 패딩 설정
+
+div#padding { padding: 20px; }
+위 아래 오른쪽 왼쪽 모두 20px로 패딩 설정
+
+

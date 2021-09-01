@@ -1,0 +1,104 @@
+테두리(border)
+내용과 패딩 주변을 감싸는 테두리입니다.
+
+border-style : 테두리를 다양한 모양으로 설정할 수 있습니다.
+(solid, dotted, dashed, double ..)
+border-color : 테두리 색상을 설정합니다. 기본적인 color 속성값들뿐 아니라 투명한 선을 나타내는 transparent 속성값을 사용할 수 있습니다. border-color 속성값이 설정되지 않으면 해당 요소의 color 속성값을 상속받습니다.
+border : 모든 테두리 속성을 한꺼번에 설정합니다. 방향은 상단부터 시작해서 시계방향으로 설정합니다.
+
+
+마진(margin)
+테두리와 이웃하는 요소 사이의 간격입니다. 마진은 눈에 보이지 않습니다.
+
+!!!! 
+박스 바깥쪽 여백을 담당하는 마진은 세로 겹침현상이 일어납니다. 즉, 세로로 나열된 두 박스의 간격은 두 마진의 합이 아니라 둘 중 큰 값을 선택합니다.
+
+* 박스의 중앙정렬을 위해 margin: 0 auto; 를 사용합니다.
+
+
+
+박스 사이징(box-sizing)
+width, height 값에 padding 이나 border 영역은 포함되지 않습니다. 따라서 width가 100%로 설정되었을 경우 padding이나 border 속성을 추가할 수 없습니다. CSS3부터는 box-sizing이라는 속성이 생겨서 이 속성을 설정하면 해당 요소의 padding과 border를 포함하여 계산합니다. 
+
+content-box : 기본값, width와 height 값에 padding과 border 영역을 포함하지 않습니다.
+border-box : width와 height 값에 padding과 border 영역을 포함합니다.
+
+
+
+둥근 테두리 만들기(border-radius)
+
+border-radius: top-left-x top-right-x bottom-right-x bottom-left-x / top-left-y top-right-y bottom-right-y bottom-left-y
+
+border-radius: top, bottom, x값 / top, bottom, y값
+
+border-radius: x값,y값을 한꺼번에
+
+
+
+테이블 테두리 설정하기
+
+border-collapse
+테이블 셀들간에 공백을 처리할지 여부를 결정하는 속성입니다. 이 속성은 tr, th, td 요소들에는 사용할 수 없습니다.
+separate : 기본값, 셀들을 분리시켜 사이에 공백을 만듭니다.
+collapse : 셀들을 합쳐서 사이의 공백을 없앱니다.
+
+
+
+과제
+
+"인터넷 기사"와     "이력서",      "회원가입"을 지금까지 배운 CSS 적용하여 재작성.
+------------       -------         -------
+1. 웹폰트 적용      테이블테두리     CSS 폼
+2. text 속성들
+3. 둥근 테두리(이미지)
+
+
+
+CSS display
+웹 페이지의 레이아웃을 결정하는 속성입니다.
+
+1. block : display 속성값이 블록인 요소는 언제나 새로운 라인에서 시작하고, 해당 라인의 모든 너비를 차지합니다.
+2. inline : display 속성값이 인라인인 요소는 새로운 라인에서 시작되지 않습니다. 또한 너비도 해당 라인 전체가 아닌 해당 HTML 요소의 내용만큼만 차지합니다.
+3. inline-block : 인라인 블록은 아래와 같은 기능을 사용할 수 있습니다.
+- width / height를 적용할 수 있습니다.
+- padding / margin을 적용할 수 있습니다.
+- line-height를 적용할 수 있습니다.
+4. none : 웹 페이지에서 해당 요소가 나타나지 않고 레이아웃에서 사라집니다.
+display: none; -> block
+
+* visibility: hidden; -> visible
+
+
+CSS form
+
+width : 폼 요소의 너비를 설정합니다.
+height : 폼 요소의 높이를 설정합니다.
+border : 테두리 색상과 두께, 스타일을 설정합니다.
+border-radisu : 폼 요소의 모서리를 둥글게 설정합니다.
+background-color : 폼 요소의 배경색을 설정합니다.
+color : 폼 요소의 텍스트 색상을 설정합니다.
+background-image : 폼 요소의 아이콘이나 이미지를 삽입합니다.
+background-position : 폼 요소에 삽입한 아이콘이나 이미지가 나타날 위치를 설정합니다.
+:focus : 폼 요소가 포커스를 가지고 있을 때 스타일을 설정합니다.
+
+
+CSS position
+요소의 위치를 결정하는 방식을 설정합니다.
+
+1. 정적위치(static position) 지정방식(기본값)
+HTML 요소의 위치를 결정하는 기본적인 방식입니다. position 속성값이 static으로 설정된 요소는 top, left, right, bottom 속성값에 영향을 받지 않습니다. 정적위치 지정방식은 단순히 웹 페이지 흐름에 따라 차례대로 요소들의 위치를 결정하는 방식입니다.
+
+2. 상대위치(relative position) 지정방식
+HTML 요소의 기본 위치를 기준으로 위치를 재설정하는 방식입니다. HTML 요소의 기본 위치란 정적위치 지정방식일 때 결정되는 위치를 의미합니다.
+
+3. 고정위치(fixed position) 지정방식
+뷰포트를 기준으로 위치를 설정하는 방식입니다. 웹 페이지가 스크롤 되어도 고정위치로 지정된 요소는 항상 같은 곳에 위치하게 됩니다.
+
+* 뷰포트
+브라우저들은 viewport로 알려진 가상의 화면을 가지고 있습니다. 즉 화면 display상의 표시 영역을 말합니다. 데스크탑의 viewport는 브라우저 창의 viewport와 같고, 사용자가 브라우저 창의 크기를 조절하면 viewport의 크기도 조절됩니다. 반면 모바일 viewport는 상하 좌우로 스크롤을 움직이거나 줌인, 줌 아웃을 통해 viewport를 변경하여 사용합니다.
+
+
+4. 절대위치(absolute position) 지정방식
+뷰포트를 기준으로 위치를 결정하는 고정위치 지정방식과 비슷하게 동작합니다. 단지 뷰포트만을 기준으로 하는 것이 아닌 조상요소를 기준으로도 위치를 결정할 수 있습니다. 만약 위치가 설정된 조상요소를 가지지 않으면 body 요소를 기준으로 위치를 결정하게 됩니다.
+
+* 조상요소라는 것은 정적위치 지정방식을 제외한 방식(relative, fixed, absolute)로 위치가 설정된 조상요소를 의미합니다.

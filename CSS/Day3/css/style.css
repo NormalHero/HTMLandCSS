@@ -1,0 +1,32 @@
+#constainer {
+    width: 740px;
+    margin: 0 auto;
+}
+#check {
+    width: 740px;
+    border: 1px solid gray;
+}
+h1 {
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+    /* font-size: 16px; */
+    font-size: 1em;
+}
+h2 {
+    color: #f00;
+    /* font-size: 18px; */
+    font-size: 1.2em;
+    text-align: center;
+}
+p {
+    /* font-size: 20px; */
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.8;
+}
+.accent { color: #00f; }
+/* .smalltext { font-size: 12px;} */
+.smalltext { font-size: 0.7em; }
